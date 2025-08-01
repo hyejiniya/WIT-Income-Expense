@@ -1,70 +1,246 @@
-# Getting Started with Create React App
+# 💼 WIT Income & Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for managing **Users**, **Income**, and **Expenses**, built with:
 
-## Available Scripts
+- **Backend**: Node.js, Express, Firebase Firestore  
+- **Frontend**: React (Create React App)
+- **Hosting**: Backend on **Render**, Frontend on **Vercel**
 
-In the project directory, you can run:
+## 🔗 Live Links
 
-### `npm start`
+- **Frontend**: [https://wit-income-expense.vercel.app](https://wit-income-expense.vercel.app)
+- **Backend API**: [https://wit-income-expense.onrender.com](https://wit-income-expense.onrender.com)
+  - Users: [https://wit-income-expense.onrender.com/users](https://wit-income-expense.onrender.com/users)
+  - Income: [https://wit-income-expense.onrender.com/income](https://wit-income-expense.onrender.com/income)
+  - Expenses: [https://wit-income-expense.onrender.com/expenses](https://wit-income-expense.onrender.com/expenses)
+- **GitHub Repo**: [https://github.com/hyejiniya/WIT-Income-Expense](https://github.com/hyejiniya/WIT-Income-Expense)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+WIT-Income-Expense/
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── config/
+│   ├── firebaseConfig.js
+│   └── server.js
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Users.js
+│   │   │   ├── Income.js
+│   │   │   └── Expenses.js
+│   │   └── App.js
+│   └── .env
+└── README.md
+```
 
-### `npm test`
+## 🚀 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Add, update, delete, and view:
+  - 🔹 **Users** (ID, name, email, phone, address)
+  - 🔹 **Income** (wages, secondary income, interest, support payment, others)
+  - 🔹 **Expenses** (categorized: savings, insurance, utilities, etc.)
+- Validation, form reset, and success/error messages
+- Firebase Firestore integration
+- Fully deployed frontend/backend
 
-### `npm run build`
+## 📌 API Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📍 Base URL
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+https://wit-income-expense.onrender.com/
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔹 Users
 
-### `npm run eject`
+| Method | Endpoint            | Description                  |
+|--------|---------------------|------------------------------|
+| GET    | `/users`            | Get all users                |
+| POST   | `/users`            | Add a new user               |
+| PUT    | `/users/:id`        | Update user by ID            |
+| DELETE | `/users/:id`        | Delete user by ID            |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔹 Income
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Method | Endpoint             | Description                  |
+|--------|----------------------|------------------------------|
+| GET    | `/income`            | Get all income records       |
+| POST   | `/income`            | Add new income               |
+| PUT    | `/income/:id`        | Update income by ID          |
+| DELETE | `/income/:id`        | Delete income by ID          |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔹 Expenses
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Method | Endpoint              | Description                  |
+|--------|-----------------------|------------------------------|
+| GET    | `/expenses`           | Get all expenses             |
+| POST   | `/expenses`           | Add new expense              |
+| PUT    | `/expenses/:id`       | Update expense by ID         |
+| DELETE | `/expenses/:id`       | Delete expense by ID         |
 
-## Learn More
+## ⚙️ Getting Started Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🔧 Backend Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd backend
+npm install
+```
 
-### Code Splitting
+Create a `.env` file in the `backend/` folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+FIREBASE_API_KEY=your_api_key
+FIREBASE_AUTH_DOMAIN=your_auth_domain
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_storage_bucket
+FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+FIREBASE_APP_ID=your_app_id
+```
 
-### Analyzing the Bundle Size
+Run the server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+### 🌐 Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd frontend
+npm install
+```
 
-### Advanced Configuration
+Create a `.env` file in the `frontend/` folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+REACT_APP_API_URL=https://wit-income-expense.onrender.com
+```
 
-### Deployment
+Run the React app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm start
+```
 
-### `npm run build` fails to minify
+## 📦 Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Backend
+- express
+- cors
+- firebase-admin
+- dotenv
+- nodemon (dev)
+
+### Frontend
+- react
+- react-dom
+- react-scripts
+
+## ❗ Error Handling
+
+All API routes implement robust error handling for common failure cases:
+
+- ✅ **Missing Fields**  
+  Returns a `400 Bad Request` with clear error messages when required fields are missing from POST/PUT requests.
+
+- ✅ **Invalid IDs**  
+  If the requested ID does not exist (for update or delete), a `404 Not Found` response is returned.
+
+- ✅ **Database Errors**  
+  Errors from Firebase (e.g., permission issues or connectivity problems) return a `500 Internal Server Error` with a descriptive message.
+
+- ✅ **Consistent Error Format**  
+  All error responses follow this format:
+  ```json
+  {
+    "error": "Descriptive message here"
+  }
+  ```
+
+- ✅ **Frontend Feedback**  
+  In the React frontend, user-friendly error messages are shown beneath the form using conditional rendering.
+
+## 🧪 Sample Data
+
+### User
+```json
+{
+  "id": "user01",
+  "name": "Jane Doe",
+  "username": "user01",
+  "email": "jane@example.com",
+  "phone": "123-456-7890",
+  "address": {
+      "street": "123 Main St",
+      "suite": "Suite 100",
+      "city": "Calgary",
+      "zipcode": "T3D3I2"
+    }
+}
+```
+
+### Income
+```json
+{
+  "id": "user01",
+  "wages": 4000,
+  "secondaryIncome": 500,
+  "interest": 50,
+  "supportPayment": 0,
+  "others": 100
+}
+```
+
+### Expenses
+```json
+{
+  "id": "user01",
+  "Savings": {
+    "rrsp": 200,
+    "investmentSavings": 150,
+    "longTermSavings": 100,
+    "bonds": 0,
+    "others": 50
+  },
+  "PaymentObligations": {
+    "creditCard": 300,
+    "loan": 250,
+    "vehicleLease": 0,
+    "lineOfCredit": 100
+  },
+  "Insurance": {
+    "lifeInsurance": 80,
+    "healthInsurance": 50,
+    "others": 20
+  },
+  "Housing": {
+    "rent": 1200,
+    "rentInsurance": 30,
+    "storageAndParking": 50,
+    "utilities": 200,
+    "maintenance": 60
+  },
+  "Utilities": {
+    "phone": 50,
+    "internet": 60,
+    "water": 40,
+    "heat": 70,
+    "electricity": 90,
+    "cable": 50,
+    "others": 0
+  },
+  "Personal": {
+    "transportation": 150,
+    "clothing": 100,
+    "giftsFamily": 80,
+    "personalGrooming": 60,
+    "diningOut": 120,
+    "hobbies": 90,
+    "others": 40
+  }
+}
+```

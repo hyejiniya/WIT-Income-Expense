@@ -182,7 +182,7 @@ const Expenses = () => {
           body: JSON.stringify(payload),
         });
       } else {
-        res = await fetch("/expenses", {
+        res = await fetch(`${API_BASE}/expenses`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),

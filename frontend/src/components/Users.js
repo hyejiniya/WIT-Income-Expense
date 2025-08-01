@@ -49,7 +49,7 @@ const Users = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("/users");
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/users`);
         const data = await res.json();
         setUsers(data);
       } catch (err) {
@@ -64,7 +64,7 @@ const Users = () => {
     event.preventDefault();
 
     try {
-      const res = await fetch("/users", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -90,7 +90,7 @@ const Users = () => {
     event.preventDefault();
 
     try {
-      const res = await fetch(`/users/${updateData.id}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/users/${updateData.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updateData)
@@ -116,7 +116,7 @@ const Users = () => {
     event.preventDefault();
 
     try {
-      const res = await fetch(`/users/${deleteId}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/users/${deleteId}`, {
         method: "DELETE"
       });
 

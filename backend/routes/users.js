@@ -21,3 +21,5 @@ router.put('/:id', updateUser);     // Update user by ID
 router.delete('/:id', deleteUser);  // Delete user by ID
 
 module.exports = router;
+
+

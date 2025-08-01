@@ -21,12 +21,26 @@ const db = require('../config/firebaseConfig');
 const usersCollection = db.collection('users');
 
 // GET all users
+// exports.getUsers = async (req, res) => {
+//   try {
+//     const queryResult = await usersCollection.get();
+//     const users = queryResult.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+//     res.json(users);
+//   } catch (err) {
+//     res.status(500).json({ error: 'Failed to load users!' });
+//   }
+// };
+
 exports.getUsers = async (req, res) => {
   try {
+    console.log("🚀 GET /users called");
+
     const queryResult = await usersCollection.get();
     const users = queryResult.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
     res.json(users);
   } catch (err) {
+    console.error("🔥 Error loading users:", err);
     res.status(500).json({ error: 'Failed to load users!' });
   }
 };

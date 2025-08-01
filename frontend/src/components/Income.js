@@ -10,6 +10,8 @@ import React, { useState } from "react";
 import "../styles/common.css";
 import "../styles/Income.css";
 
+const API_BASE = process.env.REACT_APP_API_URL;
+
 const Income = () => {
   const [incomeData, setIncomeData] = useState({
     id: "",
@@ -62,13 +64,13 @@ const Income = () => {
     try {
       let res;
       if (mode === "edit") {
-        res = await fetch(`/income/${incomeData.id}`, {
+        res = await fetch(`${API_BASE}/income/${incomeData.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
         });
       } else {
-        res = await fetch("/income", {
+        res = await fetch(`${API_BASE}/income`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
@@ -96,7 +98,7 @@ const Income = () => {
     }
 
     try {
-      const res = await fetch(`/income/${incomeData.id.trim()}`);
+      const res = await fetch(`${API_BASE}/income/${incomeData.id.trim()}`);
       const data = await res.json();
 
       if (!res.ok) {
@@ -127,7 +129,7 @@ const Income = () => {
     }
 
     try {
-      const res = await fetch(`/income/${incomeData.id.trim()}`, {
+      const res = await fetch(`${API_BASE}/income/${incomeData.id.trim()}`, {
         method: "DELETE"
       });
       const data = await res.json();

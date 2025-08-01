@@ -10,6 +10,8 @@ import React, { useState } from "react";
 import "../styles/common.css";
 import "../styles/Expenses.css";
 
+const API_BASE = process.env.REACT_APP_API_URL;
+
 const Expenses = () => {
   // Store all expense form data
   const [expensesData, setExpensesData] = useState({
@@ -137,7 +139,8 @@ const Expenses = () => {
   // Check if ID already exists
   const checkIfIdExists = async (id) => {
     try {
-      const res = await fetch(`/expenses/${id}`);
+      const res = await fetch(`${API_BASE}/expenses/${id}`);
+      
       if (!res.ok) return false;
       const data = await res.json();
       return !!data.id;
@@ -173,7 +176,7 @@ const Expenses = () => {
       }
 
       if (mode === "edit" && expensesData.id) {
-        res = await fetch(`/expenses/${expensesData.id}`, {
+        res = await fetch(`${API_BASE}/expenses/${expensesData.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
@@ -201,7 +204,7 @@ const Expenses = () => {
   // Fetch and preload expense by ID
   const loadExpenseToEdit = async () => {
     try {
-      const res = await fetch(`/expenses/${expensesData.id}`);
+      const res = await fetch(`${API_BASE}/expenses/${expensesData.id}`);
       const data = await res.json();
 
       if (!res.ok || !data.id) {
@@ -237,7 +240,7 @@ const Expenses = () => {
     }
 
     try {
-      const res = await fetch(`/expenses/${expensesData.id}`, { method: "DELETE" });
+      const res = await fetch(`${API_BASE}/expenses/${expensesData.id}`, { method: "DELETE" });
       const data = await res.json();
 
       if (!res.ok) {

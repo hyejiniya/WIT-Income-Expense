@@ -47,9 +47,9 @@ WIT-Income-Expense/
 ## 🚀 Features
 
 - Add, update, delete, and view:
-  -🔹 **Users** (ID, name, username, email, phone, address)
-  -🔹 **Income** (wages, secondary income, interest, support payment, others)
-  -🔹 **Expenses** (categorized: savings, insurance, utilities, etc.)
+  - 🔹 **Users** (ID, name, username, email, phone, address)
+  - 🔹 **Income** (wages, secondary income, interest, support payment, others)
+  - 🔹 **Expenses** (categorized: savings, insurance, utilities, etc.)
 - Validation, form reset, and success/error messages
 - Firebase Firestore integration
 - Fully deployed frontend/backend

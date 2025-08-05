@@ -39,7 +39,7 @@ WIT-Income-Expense/
 ## 🚀 Features
 
 - Add, update, delete, and view:
-  - 🔹 **Users** (ID, name, email, phone, address)
+  - 🔹 **Users** (ID, name, username, email, phone, address)
   - 🔹 **Income** (wages, secondary income, interest, support payment, others)
   - 🔹 **Expenses** (categorized: savings, insurance, utilities, etc.)
 - Validation, form reset, and success/error messages
@@ -67,7 +67,7 @@ https://wit-income-expense.onrender.com/
 
 | Method | Endpoint             | Description                  |
 |--------|----------------------|------------------------------|
-| GET    | `/income`            | Get all income records       |
+| GET    | `/income`            | Get all income records by ID |
 | POST   | `/income`            | Add new income               |
 | PUT    | `/income/:id`        | Update income by ID          |
 | DELETE | `/income/:id`        | Delete income by ID          |
@@ -76,7 +76,7 @@ https://wit-income-expense.onrender.com/
 
 | Method | Endpoint              | Description                  |
 |--------|-----------------------|------------------------------|
-| GET    | `/expenses`           | Get all expenses             |
+| GET    | `/expenses`           | Get all expenses by ID       |
 | POST   | `/expenses`           | Add new expense              |
 | PUT    | `/expenses/:id`       | Update expense by ID         |
 | DELETE | `/expenses/:id`       | Delete expense by ID         |
@@ -104,7 +104,7 @@ FIREBASE_APP_ID=your_app_id
 Run the server:
 
 ```bash
-npm start
+node server.js
 ```
 
 ### 🌐 Frontend Setup

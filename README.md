@@ -93,12 +93,9 @@ npm install
 Create a `.env` file in the `backend/` folder:
 
 ```
-FIREBASE_API_KEY=your_api_key
-FIREBASE_AUTH_DOMAIN=your_auth_domain
 FIREBASE_PROJECT_ID=your_project_id
-FIREBASE_STORAGE_BUCKET=your_storage_bucket
-FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-FIREBASE_APP_ID=your_app_id
+FIREBASE_CLIENT_EMAIL=your_client_email
+FIREBASE_PRIVATE_KEY=your_private_key
 ```
 
 Run the server:
@@ -274,7 +271,7 @@ Fill in all required fields to register a new user.
 Clicking “Submit” displays a success message.  
 ![User Added Successfully](./images/add_user_submit.png)
 
-#### 4️⃣ Error: Duplicate ID  
+#### 3️⃣ Error: Duplicate ID  
 If an existing ID is used, an error message appears.  
 ![Duplicate ID Error](./images/add_user_error.png)
 

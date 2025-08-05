@@ -244,3 +244,185 @@ All API routes implement robust error handling for common failure cases:
   }
 }
 ```
+## 👤 User Management (Frontend Walkthrough)
+
+### 🧩 User Features
+
+The User section supports the following features:
+
+- ➕ Add User  
+- ✏️ Update User  
+- 🗑️ Delete User  
+- 📋 View All Users  
+
+---
+
+### 🖥️ Full User Management Interface  
+The interface allows adding, updating, and deleting users based on a unique ID.
+
+![User Management Interface](./images/user_management.png)
+
+---
+
+### ➕ Add User
+
+#### 1️⃣ Fill in New User Details  
+Fill in all required fields to register a new user.  
+![Add User Input](./images/add_user.png)
+
+#### 2️⃣ Submit the Form  
+Click “Submit” to add the user.  
+![Submit Add User](./images/add_user_submit.png)
+
+#### 3️⃣ Successful Submission  
+A success message is shown after valid submission.  
+![User Added Successfully](./images/add_user_submit.png)
+
+#### 4️⃣ Error: Duplicate ID  
+If an existing ID is used, an error message appears.  
+![Duplicate ID Error](./images/add_user_error.png)
+
+---
+
+### 🛠️ Update User
+
+#### 1️⃣ Load User and Modify Fields  
+Enter an existing ID, update any fields, and submit.  
+![Update User Input](./images/update_user.png)
+
+#### 2️⃣ Successful Update  
+A confirmation message appears upon success.  
+![Update User Success](./images/update_user_submit.png)
+
+#### 3️⃣ Error: ID Not Found  
+If the ID does not exist, an error is shown.  
+![Non-existent ID Error](./images/add_user_error.png)
+
+---
+
+### ❌ Delete User
+
+#### 1️⃣ Enter ID to Delete  
+Type in the ID and click “Delete.”  
+![Delete User Input](./images/delete_user.png)
+
+#### 2️⃣ Successful Deletion  
+A message confirms the deletion.  
+![User Deleted Successfully](./images/delete_user_submit.png)
+
+#### 3️⃣ Error: ID Not Found  
+If the ID doesn’t exist, an error appears.  
+![Non-existent ID Error](./images/delete_user_error.png)
+
+---
+
+### 📋 View All Users
+
+On page load or refresh, all users are listed with name (email) and phone number.  
+![All Users Displayed](./images/all_users.png)
+
+---
+
+## 🧾 Expenses Management Interface
+
+### ➕ Add Expenses
+
+#### 1️⃣ Enter Valid User ID & Fill in Expense Fields  
+Only existing user IDs are allowed.  
+![Add Expenses](./images/expenses_add.png)
+
+#### 2️⃣ Successful Submission  
+Clicking “Submit” displays a success message.  
+![Expenses Submitted](./images/expenses_user_submit.png)
+
+---
+
+### 🛠️ Update Expenses
+
+#### 1️⃣ Load Existing Data by ID  
+Click “Load to Update” to fetch the data. The “Submit” button changes to “Update.”  
+![Load Expenses to Update](./images/expenses_update.png)
+
+#### 2️⃣ Submit Updated Data  
+Update any values and click “Update.”  
+![Expenses Updated Successfully](./images/expenses_update_submit.png)
+
+---
+
+### ❌ Delete Expenses
+
+#### 1️⃣ Enter ID to Delete  
+Enter a valid user ID and click “Delete.”  
+![Delete Expenses Input](./images/expenses_delete.png)
+
+#### 2️⃣ Successful Deletion  
+A message confirms the deletion.  
+![Expenses Deleted](./images/expenses_delete_submit.png)
+
+---
+
+### ⚠️ Error: Invalid or Non-existent ID
+
+- Invalid ID on add:  
+  ![Add Error - Invalid ID](./images/expenses_add_error_noID.png)
+
+- No matching record on update:  
+  ![Update Error - No Record Found](./images/expenses_update_error_noID.png)
+
+- No matching record on delete:  
+  ![Delete Error - No Record Found](./images/expenses_delete_error_noID.png)
+
+---
+
+## 🧾 Income Management Interface
+
+### ➕ Add Income
+
+#### 1️⃣ Enter Valid User ID & Fill in Income Fields  
+Only existing user IDs are allowed.  
+![Add Income](./images/income_add.png)
+
+#### 2️⃣ Successful Submission  
+Clicking “Submit” shows a success message.  
+![Income Submitted](./images/income_add_submit.png)
+
+---
+
+### 🛠️ Update Income
+
+#### 1️⃣ Load Existing Data by ID  
+Click **“Load to Update”** to auto-fill the form with the existing income data.  
+![Load Income to Update](./images/income_update_load.png)
+
+#### 2️⃣ Fill in Updated Data  
+Modify any necessary fields as needed.  
+![Fill in Updated Data](./images/income_update.png)
+
+#### 3️⃣ Submit Updated Data  
+Click **“Update”** to submit the changes. A success message will confirm the update.  
+![Income Updated Successfully](./images/income_update_submit.png)
+
+---
+
+### ❌ Delete Income
+
+#### 1️⃣ Enter ID to Delete  
+Enter a valid user ID and click “Delete.”  
+![Delete Income Input](./images/income_delete.png)
+
+#### 2️⃣ Successful Deletion  
+A message confirms the deletion.  
+![Income Deleted](./images/income_delete_submit.png)
+
+---
+
+### ⚠️ Error: Invalid or Non-existent ID
+
+- Invalid ID on add:  
+  ![Add Error - Invalid ID](./images/income_error_add_noID.png)
+
+- No matching record on update:  
+  ![Update Error - No Record Found](./images/income_error_update_noID.png)
+
+- No matching record on delete:  
+  ![Delete Error - No Record Found](./images/income_error_delete_noID.png)

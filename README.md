@@ -11,8 +11,8 @@ A full-stack web application for managing **Users**, **Income**, and **Expenses*
 - **Frontend**: [https://wit-income-expense.vercel.app](https://wit-income-expense.vercel.app)
 - **Backend API**: [https://wit-income-expense.onrender.com](https://wit-income-expense.onrender.com)
   - Users: [https://wit-income-expense.onrender.com/users](https://wit-income-expense.onrender.com/users)
-  - Income: [https://wit-income-expense.onrender.com/income](https://wit-income-expense.onrender.com/income)
   - Expenses: [https://wit-income-expense.onrender.com/expenses](https://wit-income-expense.onrender.com/expenses)
+  - Income: [https://wit-income-expense.onrender.com/income](https://wit-income-expense.onrender.com/income)  
 - **GitHub Repo**: [https://github.com/hyejiniya/WIT-Income-Expense](https://github.com/hyejiniya/WIT-Income-Expense)
 
 ## 📁 Project Structure
@@ -48,8 +48,8 @@ WIT-Income-Expense/
 
 - Add, update, delete, and view:
   - 🔹 **Users** (ID, name, username, email, phone, address)
+  - 🔹 **Expenses** (categorized: savings, insurance, utilities, etc.)  
   - 🔹 **Income** (wages, secondary income, interest, support payment, others)
-  - 🔹 **Expenses** (categorized: savings, insurance, utilities, etc.)
 - Validation, form reset, and success/error messages
 - Firebase Firestore integration
 - Fully deployed frontend/backend
@@ -71,15 +71,6 @@ https://wit-income-expense.onrender.com/
 | PUT    | `/users/:id`        | Update user by ID            |
 | DELETE | `/users/:id`        | Delete user by ID            |
 
-### 🔹 Income
-
-| Method | Endpoint             | Description                  |
-|--------|----------------------|------------------------------|
-| GET    | `/income`            | Get all income records by ID |
-| POST   | `/income`            | Add new income               |
-| PUT    | `/income/:id`        | Update income by ID          |
-| DELETE | `/income/:id`        | Delete income by ID          |
-
 ### 🔹 Expenses
 
 | Method | Endpoint              | Description                  |
@@ -88,6 +79,15 @@ https://wit-income-expense.onrender.com/
 | POST   | `/expenses`           | Add new expense              |
 | PUT    | `/expenses/:id`       | Update expense by ID         |
 | DELETE | `/expenses/:id`       | Delete expense by ID         |
+
+### 🔹 Income
+
+| Method | Endpoint             | Description                  |
+|--------|----------------------|------------------------------|
+| GET    | `/income`            | Get all income records by ID |
+| POST   | `/income`            | Add new income               |
+| PUT    | `/income/:id`        | Update income by ID          |
+| DELETE | `/income/:id`        | Delete income by ID          |
 
 ## ⚙️ Getting Started Locally
 
@@ -187,18 +187,6 @@ All API routes implement robust error handling for common failure cases:
 }
 ```
 
-### Income
-```json
-{
-  "id": "user01",
-  "wages": 4000,
-  "secondaryIncome": 500,
-  "interest": 50,
-  "supportPayment": 0,
-  "others": 100
-}
-```
-
 ### Expenses
 ```json
 {
@@ -248,6 +236,19 @@ All API routes implement robust error handling for common failure cases:
   }
 }
 ```
+
+### Income
+```json
+{
+  "id": "user01",
+  "wages": 4000,
+  "secondaryIncome": 500,
+  "interest": 50,
+  "supportPayment": 0,
+  "others": 100
+}
+```
+
 ## 👤 User Management (Frontend Walkthrough)
 
 ### 🧩 User Features

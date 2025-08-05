@@ -270,12 +270,8 @@ The interface allows adding, updating, and deleting users based on a unique ID.
 Fill in all required fields to register a new user.  
 ![Add User Input](./images/add_user.png)
 
-#### 2️⃣ Submit the Form  
-Click “Submit” to add the user.  
-![Submit Add User](./images/add_user_submit.png)
-
-#### 3️⃣ Successful Submission  
-A success message is shown after valid submission.  
+#### 2️⃣ Successful Submission  
+Clicking “Submit” displays a success message.  
 ![User Added Successfully](./images/add_user_submit.png)
 
 #### 4️⃣ Error: Duplicate ID  
@@ -287,7 +283,7 @@ If an existing ID is used, an error message appears.
 ### 🛠️ Update User
 
 #### 1️⃣ Load User and Modify Fields  
-Enter an existing ID, update any fields, and submit.  
+Enter an existing ID, update any fields(name, username, email, and city are mandatory), and click "update" button.  
 ![Update User Input](./images/update_user.png)
 
 #### 2️⃣ Successful Update  
@@ -296,7 +292,7 @@ A confirmation message appears upon success.
 
 #### 3️⃣ Error: ID Not Found  
 If the ID does not exist, an error is shown.  
-![Non-existent ID Error](./images/add_user_error.png)
+![Non-existent ID Error](./images/update_user_error.png)
 
 ---
 
@@ -324,6 +320,8 @@ On page load or refresh, all users are listed with name (email) and phone number
 ---
 
 ## 🧾 Expenses Management Interface
+The interface enables adding, updating, and deleting categorized expenses for each user based on a valid user ID.
+![Expenses Management Interface](./images/expenses_management.png)
 
 ### ➕ Add Expenses
 
@@ -333,18 +331,22 @@ Only existing user IDs are allowed.
 
 #### 2️⃣ Successful Submission  
 Clicking “Submit” displays a success message.  
-![Expenses Submitted](./images/expenses_user_submit.png)
+![Expenses Submitted](./images/expenses_add_submit.png)
 
 ---
 
 ### 🛠️ Update Expenses
 
 #### 1️⃣ Load Existing Data by ID  
-Click “Load to Update” to fetch the data. The “Submit” button changes to “Update.”  
-![Load Expenses to Update](./images/expenses_update.png)
+Click **“Load to Update”** to auto-fill the form with the existing expenses data.
+![Load Expenses to Update](./images/expenses_update_load.png)
 
-#### 2️⃣ Submit Updated Data  
-Update any values and click “Update.”  
+#### 2️⃣ Fill in Updated Data  
+Modify any necessary fields as needed.  
+![Fill in Updated Data](./images/expenses_update.png)
+
+#### 2️⃣ Successful Submission  
+Clicking "Update" displays a success message.   
 ![Expenses Updated Successfully](./images/expenses_update_submit.png)
 
 ---
@@ -374,11 +376,14 @@ A message confirms the deletion.
 
 ---
 
-## 🧾 Income Management Interface
+## 🖥️ Full Income Management Interface
+The interface enables adding, updating, and deleting income records for each user based on a valid user ID.
+![Income Management Interface](./images/income_management.png)
+
 
 ### ➕ Add Income
 
-#### 1️⃣ Enter Valid User ID & Fill in Income Fields  
+#### 1️⃣ Enter Valid User ID & Fill in Income Fields 
 Only existing user IDs are allowed.  
 ![Add Income](./images/income_add.png)
 
@@ -419,10 +424,10 @@ A message confirms the deletion.
 ### ⚠️ Error: Invalid or Non-existent ID
 
 - Invalid ID on add:  
-  ![Add Error - Invalid ID](./images/income_error_add_noID.png)
+  ![Add Error - Invalid ID](./images/income_add_error_noID.png)
 
 - No matching record on update:  
-  ![Update Error - No Record Found](./images/income_error_update_noID.png)
+  ![Update Error - No Record Found](./images/income_update_error_noID.png)
 
 - No matching record on delete:  
-  ![Delete Error - No Record Found](./images/income_error_delete_noID.png)
+  ![Delete Error - No Record Found](./images/income_delete_error_noID.png)

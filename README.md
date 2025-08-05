@@ -345,7 +345,7 @@ Click **“Load to Update”** to auto-fill the form with the existing expenses 
 Modify any necessary fields as needed.  
 ![Fill in Updated Data](./images/expenses_update.png)
 
-#### 2️⃣ Successful Submission  
+#### 3️⃣ Successful Submission  
 Clicking "Update" displays a success message.   
 ![Expenses Updated Successfully](./images/expenses_update_submit.png)
 

@@ -336,6 +336,7 @@ Clicking “Submit” displays a success message.
 
 #### 1️⃣ Load Existing Data by ID  
 Click **“Load to Update”** to auto-fill the form with the existing expenses data.
+Note: After loading the data, the “Submit” button will be replaced by “Update.”
 ![Load Expenses to Update](./images/expenses_update_load.png)
 
 #### 2️⃣ Fill in Updated Data  
@@ -394,6 +395,7 @@ Clicking “Submit” shows a success message.
 
 #### 1️⃣ Load Existing Data by ID  
 Click **“Load to Update”** to auto-fill the form with the existing income data.  
+Note: After loading the data, the “Submit” button will be replaced by “Update.”
 ![Load Income to Update](./images/income_update_load.png)
 
 #### 2️⃣ Fill in Updated Data  

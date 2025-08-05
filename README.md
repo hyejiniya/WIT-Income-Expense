@@ -324,7 +324,7 @@ On page load or refresh, all users are listed with name (email) and phone number
 
 ---
 
-## 🧾 Expenses Management Interface
+## 🖥️ Expenses Management Interface
 The interface enables adding, updating, and deleting categorized expenses for each user based on a valid user ID.
 ![Expenses Management Interface](./images/expenses_management.png)
 

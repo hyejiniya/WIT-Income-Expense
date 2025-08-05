@@ -20,10 +20,17 @@ A full-stack web application for managing **Users**, **Income**, and **Expenses*
 ```
 WIT-Income-Expense/
 ├── backend/
-│   ├── controllers/
-│   ├── routes/
 │   ├── config/
-│   ├── firebaseConfig.js
+│   │   └── firebaseConfig.js
+│   ├── controllers/
+│   │   ├── expensesController.js
+│   │   ├── incomeController.js
+│   │   └── usersController.js
+│   ├── routes/
+│   │   ├── expenses.js
+│   │   ├── income.js
+│   │   └── users.js
+│   ├── .env
 │   └── server.js
 ├── frontend/
 │   ├── src/
@@ -31,8 +38,9 @@ WIT-Income-Expense/
 │   │   │   ├── Users.js
 │   │   │   ├── Income.js
 │   │   │   └── Expenses.js
+│   │   ├── styles/
 │   │   └── App.js
-│   └── .env
+├── images/
 └── README.md
 ```
 
